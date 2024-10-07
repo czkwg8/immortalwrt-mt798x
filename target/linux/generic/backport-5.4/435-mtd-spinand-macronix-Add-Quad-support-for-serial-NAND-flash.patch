@@ -21,24 +21,6 @@ diff --git a/drivers/mtd/nand/spi/macronix.c b/drivers/mtd/nand/spi/macronix.c
 index a9890350db0293..3f31f1381a62c0 100644
 --- a/drivers/mtd/nand/spi/macronix.c
 +++ b/drivers/mtd/nand/spi/macronix.c
-@@ -126,7 +126,7 @@ static const struct spinand_info macronix_spinand_table[] = {
- 		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
- 					      &write_cache_variants,
- 					      &update_cache_variants),
--		     0,
-+		     SPINAND_HAS_QE_BIT,
- 		     SPINAND_ECCINFO(&mx35lfxge4ab_ooblayout,
- 				     mx35lf1ge4ab_ecc_get_status)),
- 	SPINAND_INFO("MX35LF4GE4AD",
-@@ -136,7 +136,7 @@ static const struct spinand_info macronix_spinand_table[] = {
- 		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
- 					      &write_cache_variants,
- 					      &update_cache_variants),
--		     0,
-+		     SPINAND_HAS_QE_BIT,
- 		     SPINAND_ECCINFO(&mx35lfxge4ab_ooblayout,
- 				     mx35lf1ge4ab_ecc_get_status)),
- 	SPINAND_INFO("MX35LF1G24AD",
 @@ -146,16 +146,16 @@ static const struct spinand_info macronix_spinand_table[] = {
  		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
  					      &write_cache_variants,
@@ -77,12 +59,3 @@ index a9890350db0293..3f31f1381a62c0 100644
  		     SPINAND_ECCINFO(&mx35lfxge4ab_ooblayout,
  				     mx35lf1ge4ab_ecc_get_status)),
  	SPINAND_INFO("MX31UF1GE4BC",
-@@ -183,7 +183,7 @@ static const struct spinand_info macronix_spinand_table[] = {
- 		     SPINAND_INFO_OP_VARIANTS(&read_cache_variants,
- 					      &write_cache_variants,
- 					      &update_cache_variants),
--		     0 /*SPINAND_HAS_QE_BIT*/,
-+		     SPINAND_HAS_QE_BIT,
- 		     SPINAND_ECCINFO(&mx35lfxge4ab_ooblayout,
- 				     mx35lf1ge4ab_ecc_get_status)),
- 
