@@ -190,7 +190,7 @@ endchoice
 
 choice
 	prompt "MT7981 custom WACPU firmware"
-	depends on MTK_MT_WIFI_DRIVER_VERSION_7661 && MTK_CHIP_MT7981
+	depends on MTK_CHIP_MT7981
 
 	config MTK_MT_WIFI_MT7981_DEFAULT_FIRMWARE
 	bool "default firmware"
@@ -213,7 +213,7 @@ endchoice
 
 choice
 	prompt "MT7986 custom WACPU firmware"
-	depends on MTK_MT_WIFI_DRIVER_VERSION_7661 && MTK_CHIP_MT7986
+	depends on MTK_CHIP_MT7986
 
 	config MTK_MT_WIFI_MT7986_DEFAULT_FIRMWARE
 	bool "default firmware"
